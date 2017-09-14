@@ -1,6 +1,7 @@
 <DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8" />
     <title>Interneto svetainių kūrimas</title>
     <link href="styles.css" rel="stylesheet">
 </head>
@@ -12,7 +13,16 @@
             </a>
         </div>
         <div class="container">
-            <div class="menu">
+            <div class="mobile-nav">
+                <div class="language">
+                    <a href="#"><img src="https://www.cpartner.lt/Theme/cpartner/assets/img/bg_flag_uk.png" alt=""><span>In English</span></a>
+                </div>
+                <div class="contact">
+                    <a class="numb" href="#">+370 670 27384</a>
+                    <a href="#">hi@cpartner.lt</a>
+                </div>
+            </div>
+            <div class="menu" id="s-menu">
                 <ul>
                     <li><a href="#">Apie mus</a></li>
                     <li><a href="#">Projektų galerija</a></li>
@@ -21,6 +31,13 @@
                     <li><a href="#">Karjera</a></li>
                     <li><a href="#">Kontaktai</a></li>
                 </ul>
+                <a class="icon" href="javascript:void(0);" onclick="myFunction()">
+                    <div class="menu-box">
+                        <div class="menu-line"></div>
+                        <div class="menu-line"></div>
+                        <div class="menu-line"></div>
+                    </div>
+                </a>
             </div>
         </div>
     </nav>
@@ -61,7 +78,7 @@
     </main>
     <footer>
         <div class="container">
-            <div class="col">
+            <div class="col wrap">
                 <div class="col-4-chld">
                     <img src="https://www.cpartner.lt/file/manual/about1.png" alt="">
                     <h4>Interneto svetainės</h4>
@@ -107,15 +124,26 @@
                     <p>Vilniaus biuras Kalvarijų g. 137E</p>
                     <p>Klaipėdos biuras Bangų g. 5A, 4a</p>
                 </div>
-                <div class="col-footer-chld">
+                <div class="col-footer-chld" style="order: -2">
                     <a href="#">hi@cpartner.lt</a>
                 </div>
-                <div class="col-footer-chld">
+                <div class="col-footer-chld" style="order: -1">
                 <img src="https://www.cpartner.lt/Theme/cpartner/assets/img/logo_w.png" alt="">
                 </div>
             </div>
             </div>
         </div>
     </footer>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("s-menu");
+            if (x.className === "menu") {
+                x.className += " responsive";
+            } else {
+                x.className = "menu";
+            }
+        }
+    </script>
 </body>
 </html>

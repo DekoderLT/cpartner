@@ -4,6 +4,11 @@
     font-family: Arial, Helvetica, sans-serif;
     color:black;
 }
+
+@font-face{font-family:AvenirNextCyrRegular;src:url(https://www.cpartner.lt/Theme/cpartner/assets/fonts/AvenirNextCyrRegular.eot);src:url(https://www.cpartner.lt/Theme/cpartner/assets/fonts/AvenirNextCyrRegular.eot) format('embedded-opentype'),url(https://www.cpartner.lt/Theme/cpartner/assets/fonts/AvenirNextCyrRegular.woff2) format('woff2'),url(https://www.cpartner.lt/Theme/cpartner/assets/fonts/AvenirNextCyrRegular.woff) format('woff'),url(https://www.cpartner.lt/Theme/cpartner/assets/fonts/AvenirNextCyrRegular.ttf) format('truetype'),url(https://www.cpartner.lt/Theme/cpartner/assets/fonts/AvenirNextCyrRegular.svg#AvenirNextCyrRegular) format('svg')}
+@font-face{font-family:AvenirNextCyrBold;src:url(https://www.cpartner.lt/Theme/cpartner/assets/fonts/AvenirNextCyrBold.eot);src:url(https://www.cpartner.lt/Theme/cpartner/assets/fonts/AvenirNextCyrBold.eot) format('embedded-opentype'),url(https://www.cpartner.lt/Theme/cpartner/assets/fonts/AvenirNextCyrBold.woff2) format('woff2'),url(https://www.cpartner.lt/Theme/cpartner/assets/fonts/AvenirNextCyrBold.woff) format('woff'),url(https://www.cpartner.lt/Theme/cpartner/assets/fonts/AvenirNextCyrBold.ttf) format('truetype'),url(https://www.cpartner.lt/Theme/cpartner/assets/fonts/AvenirNextCyrBold.svg#AvenirNextCyrBold) format('svg')}
+@font-face{font-family:AvenirNextCyrLight;src:url(https://www.cpartner.lt/Theme/cpartner/assets/fonts/AvenirNextCyrLight.eot);src:url(https://www.cpartner.lt/Theme/cpartner/assets/fonts/AvenirNextCyrLight.eot) format('embedded-opentype'),url(https://www.cpartner.lt/Theme/cpartner/assets/fonts/AvenirNextCyrLight.woff2) format('woff2'),url(https://www.cpartner.lt/Theme/cpartner/assets/fonts/AvenirNextCyrLight.woff) format('woff'),url(https://www.cpartner.lt/Theme/cpartner/assets/fonts/AvenirNextCyrLight.ttf) format('truetype'),url(https://www.cpartner.lt/Theme/cpartner/assets/fonts/AvenirNextCyrLight.svg#AvenirNextCyrLight) format('svg')}
+@font-face{font-family:AvenirNextCyrUltraLight;src:url(https://www.cpartner.lt/Theme/cpartner/assets/fonts/AvenirNextCyrUltraLight.eot);src:url(https://www.cpartner.lt/Theme/cpartner/assets/fonts/AvenirNextCyrUltraLight.eot) format('embedded-opentype'),url(https://www.cpartner.lt/Theme/cpartner/assets/fonts/AvenirNextCyrUltraLight.woff2) format('woff2'),url(https://www.cpartner.lt/Theme/cpartner/assets/fonts/AvenirNextCyrUltraLight.woff) format('woff'),url(https://www.cpartner.lt/Theme/cpartner/assets/fonts/AvenirNextCyrUltraLight.ttf) format('truetype'),url(https://www.cpartner.lt/Theme/cpartner/assets/fonts/AvenirNextCyrUltraLight.svg#AvenirNextCyrUltraLight) format('svg')}
 a {
     text-decoration: none;
 }
@@ -26,7 +31,7 @@ nav {
     padding: 13px;
 }
 .logo img {
-    height: 60%;
+    height: 35px;
 }
 .menu {
 
@@ -48,7 +53,7 @@ nav {
     padding: 10px;
 }
 .menu ul li a:hover {
-    color:purple;
+    color:#d32483;
 }
 /* Header */
 header img {
@@ -64,7 +69,10 @@ header h1 {
     font-weight: 800;
 }
 h1 span {
-    color:purple;
+    /* https://css-tricks.com/snippets/css/gradient-text/ */
+    background: -webkit-linear-gradient(left,#792495,#fd0208);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 header a {
@@ -77,13 +85,12 @@ header a {
     position: absolute; 
     bottom: 15%; 
     left: 20%; 
-    width: 200px; 
     border: solid 2px white;
     border-radius:5px;
     padding:15px;
 }
 header a:hover {
-    background-color:purple;
+    background-color:#d32483;
 }
 /* Main */
 main h3 {
@@ -92,7 +99,7 @@ main h3 {
 }
 
 main h3:hover {
-    color:purple;
+    color:#d32483;
 }
 main p {
     font-size: 22px;
@@ -111,7 +118,7 @@ main p {
 
 .text {
     width:40%;
-    margin: 100px;
+    margin: 90px;
     position: absolute;
 }
 
@@ -122,14 +129,14 @@ main p {
     color:red;
     font-weight: 800;
     width: 200px; 
-    border: solid 2px purple;
+    border: solid 2px #d32483;
     border-radius:5px;
     margin-top: 15px;
     padding:15px;
 }
 .btn:hover {
     color:white;
-    background-color:purple;
+    background-color:#d32483;
 }
 .phone {
     height: 50%;
@@ -160,10 +167,12 @@ main p {
 }
 .bg-one {
     background-image: url(https://www.cpartner.lt/file/repository/projects/project_02_bg.jpg);
+    background-size: cover;
     background-position:right;
 }
 .bg-two {
     background-image: url(https://www.cpartner.lt/file/repository/projects/project_03_bg.jpg);
+    background-size: cover;
     background-position:left;
 }
 .article {
@@ -172,10 +181,10 @@ main p {
 
 /* footer */
 footer {
-    background: url(https://www.cpartner.lt/Theme/cpartner/assets/img/bg_footer.jpg) no-repeat;
+    background: url(https://www.cpartner.lt/Theme/cpartner/assets/img/bg_footer.jpg) no-repeat center top;
     background-size: cover;
     margin-top:50px;
-    padding: 100px 0 50px 0;
+    padding: 100px 0 10px;
 }
 
 .col{
@@ -205,7 +214,11 @@ footer {
     text-align: center;
 }
 .col-3-chld h5 {
-    color:purple;
+    color:#d32483;
+        /* https://css-tricks.com/snippets/css/gradient-text/ */
+    background: -webkit-linear-gradient(left,#792495,#fd0208);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-size:200px;
     font-weight: 100;
 }
@@ -231,20 +244,310 @@ footer {
     border-bottom: 2px solid grey;
 }
 .col-footer-chld a:hover {
-    color:purple;
+    color:#d32483;
 }
 .col-footer-chld img {
     margin: auto;
     height: 40px;
 }
 
-@media only screen and (max-width: 768px) {
+.menu .icon {
+    display:none;
+}
+.mobile-nav {
+    display:none;
+}
+/*990px*/
+@media only screen and (max-width: 990px) {
+
+/* Navigacija */
+.logo {
+    padding-left: 30px;
+}
+.mobile-nav {
+    display: flex;
+    float: right;
+    margin: 5px 120px 0;
+    width: 350px;
+    align-items:flex-end;
+    justify-content: space-between;
+}
+    .language{
+        display:absolute;
+        text-align:right;
+        flex-basis:27%;
+        font-size:15px;
+    }
+    .contact{
+        display:absolute;
+        width: 200px;
+        flex-basis:65%;
+        text-align:center;
+        font-size:15px;
+    }
+    .numb {
+        font-size:24px; 
+        line-height:32px;
+    }
+/* before click */
+    .menu a {
+    display: none;
+    }
+    .menu a.icon {
+      position: absolute;
+      display: block;
+      top: 0;
+      right: 30px;
+    }
+    .menu-box {
+        width: 50px;
+        height: 35px;
+        border: 1px solid red;
+        border-radius: 3px;
+        margin: 13px 0;
+        display: block;
+        box-sizing: border-box;
+    }
+    .menu-box .menu-line {
+        width: 80%;
+        margin: 7px auto;
+        border: solid 1px red;
+        box-sizing: border-box;
+    }
+/* after click */
+    .menu.responsive {
+        position: fixed;
+        width:100%;
+        height: 100%;
+        background-color:#fafafa;
+    }
+
+    .menu.responsive .icon {
+      position: absolute;
+      top: 0;
+      right: 30px;
+    }
+    .menu.responsive a {
+        line-height: 16px;
+        display: block;
+        text-align: left;
+    }
+    .menu.responsive ul {
+        padding: 25px;
+    }
+    .menu.responsive ul li {
+        padding:0;
+    }
+/* header */
+
+header h1 { 
+    top: 15%; 
+    left: 15%; 
+    width: 300px; 
+    font-size: 38px;
+    line-height: 44px;
+    letter-spacing: -2px;
+}
+
+header a {
+    font-size:14px;
+    bottom: 30%; 
+    left: 15%; 
+    padding:10px 0;
+    margin-bottom:30px;
+}
+/* Main */
+.first-col {
+    height: 350px;
+    width: 750px;
+}
+main h3 {
+    font-size:42px;
+}
+main p, .tablet {
+    display:none;
+}
+.btn { 
+    padding:10px 0;
+    font-size:16px;
+    font-weight: 600;
+}
+.text {
+    width:55%;
+    margin: 40px 0 0 30px;
+    
+}
+.text img {
+    height: 60px;
+}
+.phone {
+    height: 80%;
+}
+.scnd-col {
+    width: 750px;
+    height: auto;
+}
+.scnd-col-chld {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-basis: 48%;
+    height: 350px;
+    background-repeat: no-repeat;
+}
+.article {
+    width: 80%;
+}
+.article h3 {
+    font-size:32px;
+}
+/* Footer */
+footer {
+    padding-top:40px;
+}
+.col {
+    padding: 0 40px;
+}
+.wrap {
+    flex-wrap: wrap;
+    margin-top: 0;
+}
+.col-4-chld {
+    flex-basis: 48%;
+}
+.col-4-chld p, .col-3-chld p{
+    font-size:18px;
+}
+
+.col-4-chld h4{
+    font-size:28px;
+    line-height: 50px;
+}
+.col-4-chld img {
+    margin-top: 20px;
+}
+
+.col-3-chld h5{
+    font-size:120px;
+}
+.col-3-chld p{
+    font-size:30px;
+}
+}
+
+/*600px*/
+@media only screen and (max-width: 600px) {
+/* Navigacija */
+.language span{
+    display:none;
+}
+.logo {
+    padding-left:10px;
+}
+.numb {
+    font-size:20px; 
+    line-height:32px;
+}
+.mobile-nav {
+    display: flex;
+    float: right;
+    margin: 5px 60px 0;
+    width: 350px;
+    align-items:flex-end;
+    justify-content: space-between;
+}
+.language{
+    flex-basis:40%;
+}
+/* Header */
+header h1 { 
+    top: 15%; 
+    left: 3%; 
+    width: 200px; 
+    font-size: 26px;
+    line-height: 32px;
+    letter-spacing: -2px;
+}
+
+header a {
+    font-size:12px;
+    bottom: 50%; 
+    left: 3%; 
+    background-color: purple;
+    padding:5px;
+}
+/* Main */
+.first-col {
+    width: 120%;
+    height: 300px;
+}
+main h3 {
+    font-size:28px;
+}
+main p, .tablet {
+    display:none;
+}
+.btn { 
+    padding:6px;
+    font-size:14px;
+    width:150px;
+}
+.text {
+    width:80%;
+    margin: 20px 15px;
+}
+.text img {
+    height: 60px;
+}
+.phone {
+    display:none;
+}
+.scnd-col {
+    padding:0;
+    width: 300px;
+    height: 620px;
+    flex-direction: column;
+}
+.bg-two {
+    background-size: 400px;
+}
+
+/* footer */
+
 .col {
     flex-direction: column;
  }
 .col-footer-chld {
    box-sizing: border-box;
-    flex-basis: 20%;
+    flex-basis: 15%;
+}
+
+.col-4-chld {
+    flex-basis: 30%;
+}
+.col-4-chld h4{
+    font-size:24px;
+    margin: 10px;
+}
+.col-4-chld img {
+    height: 60px;
+    line-height: 80px;
+}
+.col-4-chld p {
+    font-size:17px;
+}
+.col-3-chld {
+    flex: 25%;
+}
+
+.col-3-chld h5{
+    font-size:80px;
+}
+.col-3-chld img{
+    height: 20px;
+}
+.col-3-chld p{
+    font-size:26px;
 }
 }
 
